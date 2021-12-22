@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(31, 31, 31);
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 10%;
+}
+
+span {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    }
+
+nav {
+    margin: 0 auto;
+}
+
+span:hover {
+    cursor: pointer;
+    color: white;
+}
+
+span::before {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    content: ""; 
+    width: 100%;
+    height: 100%;
+    background: crimson;
+    transition: 0.5s;
+}
+
+span:hover::before {
+    left: 100%;
+}
+
+span::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 2px;
+    left: 100%;
+    content: "";
+    color: black;
+    background: crimson;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+span:hover::after {
+    left: 0%;
+}
